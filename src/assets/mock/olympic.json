@@ -133,5 +133,25 @@
         "athleteCount": 403
       }
     ]
+  },
+  {
+    "id": 6,
+    "country": "Colombie",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medalsCount": 44,
+        "athleteCount": 10
+      },
+      {
+        "id": 2,
+        "year": 2024,
+        "city": "Paris",
+        "medalsCount": 37,
+        "athleteCount": 10
+      }
+    ]
   }
 ]

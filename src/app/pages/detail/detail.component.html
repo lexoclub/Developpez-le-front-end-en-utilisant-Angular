@@ -1,0 +1,23 @@
+@if (countryData) {
+<div>
+  <h2>{{ countryData.country }}</h2>
+  <div>
+    <p>{{ numberOfEntries }}</p>
+    <p>{{ totalMedals }}</p>
+    <p>{{ totalAthletes }}</p>
+  </div>
+
+  <!-- Line Chart -->
+  <ngx-charts-line-chart
+    [view]="[700, 400]" 
+    [results]="chartData"
+    [xAxis]="true"
+    [yAxis]="true"
+    xAxisLabel="Dates"
+    [showXAxisLabel]="true"
+    [autoScale]="true">
+  </ngx-charts-line-chart>
+</div>
+
+}
+<button (click)="goBack()" class="back-button">Back to Home</button>

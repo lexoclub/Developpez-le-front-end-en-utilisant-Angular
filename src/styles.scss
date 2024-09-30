@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #007d89; // A teal color for primary elements
+$secondary-color: #f5f5f5; // A light background color
+$accent-color: #a10a28; // Accent color for specific elements
+
+.number-box {
+    background-color: $secondary-color;
+    border: 1px solid $primary-color;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  
+    p {
+      margin: 0;
+      font-size: 18px;
+      color: $primary-color;
+    }
+  }
