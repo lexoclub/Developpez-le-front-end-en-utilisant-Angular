@@ -1,23 +1,36 @@
-@if (countryData) {
-<div>
-  <h2>{{ countryData.country }}</h2>
-  <div>
-    <p>{{ numberOfEntries }}</p>
-    <p>{{ totalMedals }}</p>
-    <p>{{ totalAthletes }}</p>
+<div class="container">
+  <div class="title-container">
+    <h2>{{ countryData.country }}</h2>
+  </div>
+  <div class="stats-container">
+    <div class="stat-card">
+      <p>Number of entries</p>
+      <h3>{{ numberOfEntries }}</h3>
+    </div>
+    <div class="stat-card">
+      <p>Total number medals</p>
+      <h3>{{ totalMedals }}</h3>
+    </div>
+    <div class="stat-card">
+      <p>Total number of athletes</p>
+      <h3>{{ totalAthletes }}</h3>
+    </div>
   </div>
 
-  <!-- Line Chart -->
-  <ngx-charts-line-chart
-    [view]="[700, 400]" 
-    [results]="chartData"
-    [xAxis]="true"
-    [yAxis]="true"
-    xAxisLabel="Dates"
-    [showXAxisLabel]="true"
+  <!-- Line Chart 
+   xAxisLabel="Dates"
+    [showXAxisLabel]="true" 
+  -->
+  <ngx-charts-line-chart 
+  [view]="[700, 400]" 
+  [results]="chartData" 
+  [xAxis]="true" 
+  [yAxis]="true" 
+  
     [autoScale]="true">
   </ngx-charts-line-chart>
+  <h2>Dates</h2>
+  <button (click)="goBack()" class="back-button">Back to Home</button>
 </div>
 
-}
-<button (click)="goBack()" class="back-button">Back to Home</button>
+
