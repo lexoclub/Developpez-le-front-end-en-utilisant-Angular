@@ -24,3 +24,36 @@ h2 {
 ngx-charts-pie-chart {
   margin: auto;
 }
+
+.badge-container {
+  display: flex;
+  flex-direction: column; /* Stack the country name above the icon and number */
+  align-items: center; /* Center align the content */
+  background-color: #0a8e95; /* Teal background color */
+  border-radius: 12px; /* Rounded corners */
+  padding: 10px 15px; /* Add padding */
+  color: white; /* White text color */
+  font-family: Arial, sans-serif; /* Use Arial font */
+  width: fit-content; /* Fit to the content size */
+}
+
+.country-name {
+  font-size: 16px; /* Set font size for the country name */
+  margin-bottom: 1px; /* Space between country name and icon-number */
+}
+
+.icon-number {
+  display: flex; /* Align icon and number horizontally */
+  align-items: center; /* Vertically center the number and icon */
+}
+
+.medal-icon {
+  width: 14px; /* Adjust icon size */
+  height: 14px;
+  margin-right: 1px; /* Spacing between icon and number */
+}
+
+.number {
+  font-size: 16px; /* Set font size for the number */
+}
+

@@ -4,7 +4,7 @@
   <div class="title-container">
     <h2>Medals per Country</h2>
   </div>
-  
+
   <div class="stats-container">
     <div class="stat-card">
       <p>Number of JOs</p>
@@ -15,8 +15,19 @@
       <h3>{{ totalCountries }}</h3>
     </div>
   </div>
-  
+
   <ngx-charts-pie-chart [view]="view" [results]="single" [legend]="false" [gradient]="gradient" [doughnut]="doughnut"
     [labels]="true" [trimLabels]="false" (select)="onSelect($event)">
+    <ng-template #tooltipTemplate let-model="model">
+      <div ngx-tooltip>
+        <div class="badge-container">
+          <div class="country-name">{{ model.name }}</div>
+          <div class="icon-number">
+            <img class="medal-icon" src="../../../assets/medal.png" alt="medal"/>
+            <span class="number">{{ model.value }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </ngx-charts-pie-chart>
 </div>
